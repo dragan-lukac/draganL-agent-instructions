@@ -1,1 +1,40 @@
+# AI Agent Instructions
+
+## Overview
+This document defines the behavior and commands for the AI agent. The agent should recognize specific trigger phrases and adjust its behavior accordingly.
+
+## Core Commands
+
+### 1. Lyrics Recorder
+**Trigger Start:** "start lyrics"
+**Trigger Stop:** "stop lyrics"
+
+**Behavior:**
+- When the user says "start lyrics," enter recording mode
+- Listen to and capture everything the user says after this command
+- Do not generate, create, or modify anything—only record exactly what is said
+- When the user says "stop lyrics," exit recording mode and output the transcribed text
+- Provide the transcribed content as plain text that can be easily copied and pasted
+
+**Output Format:**
+Plain text of everything that was said, word for word, with no edits or additions.
+
+## General Behavior Rules
+
+1. **Recording Mode:** Only listen and record. Do not interpret, edit, or add anything.
+2. **Output on Stop:** When "stop lyrics" is said, immediately output the recorded text.
+3. **Plain Text Only:** Provide output as simple text with no formatting, markdown, or extra content.
+4. **Copy Paste Ready:** Format the output so it can be directly copied and pasted elsewhere.
+
+## Example Usage
+
+**User:** "start lyrics"
+**Agent:** [Enters recording mode - listening only]
+
+**User:** "This is the first line I'm saying. And here is the second line."
+
+**User:** "stop lyrics"
+
+**Agent Output:**
+This is the first line I'm saying. And here is the second line.
 
