@@ -1,8 +1,19 @@
 #!/usr/bin/env python3
-import requests
+import os, requests
+from pathlib import Path
 
-TOKEN  = "NOTION_TOKEN_REMOVED"
-ROOT   = "341a338b6c51809b8fe1d17ede7e28dc"
+def load_env():
+    env_file = Path(__file__).parent / ".env"
+    if env_file.exists():
+        for line in env_file.read_text().splitlines():
+            line = line.strip()
+            if line and not line.startswith("#") and "=" in line:
+                k, _, v = line.partition("=")
+                os.environ.setdefault(k.strip(), v.strip())
+load_env()
+
+TOKEN  = os.environ["NOTION_TOKEN"]
+ROOT   = os.environ["NOTION_ROOT_PAGE_ID"]
 OLD_DB = "346a338b6c5181e8bcf0cb4c48085fb0"
 
 HEADERS = {

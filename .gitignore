@@ -24,3 +24,5 @@ rad.json
 #Test results file
 TestResults.xml*-high.onnx
 *-high.onnx.json
+*.onnx
+*.onnx.json
