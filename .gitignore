@@ -22,4 +22,5 @@ rad.json
 #License-file
 *.flf
 #Test results file
-TestResults.xml
+TestResults.xml*-high.onnx
+*-high.onnx.json

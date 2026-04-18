@@ -8,7 +8,7 @@
 #   cat file.txt | speak.sh
 
 PIPER=~/.local/bin/piper
-VOICE=~/HUB/Projekti/draganL-agent-instructions/TTSforAI/piper/voices/en_US-ryan-high.onnx
+VOICE=~/HUB/Projekti/draganL-agent-instructions/TTSforAI/piper/voices/en_US-ryan-low.onnx
 
 if [ "$#" -gt 0 ]; then
     TEXT="$*"
